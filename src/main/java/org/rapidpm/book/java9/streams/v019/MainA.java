@@ -11,7 +11,6 @@ import static org.rapidpm.book.java9.streams.v019.MainA.Colour.GREEN;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.function.BiConsumer;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -70,7 +69,7 @@ public class MainA {
                                                  averagingDouble(Car::km)))));
 
 
-    resultB.getOrDefault(BMW, emptyMap())
+    resultB.getOrDefault(BMW , emptyMap())
            .forEach((colour , km) -> System.out.println("colour / avg [km] = " + colour + " - " + km));
 
   }
