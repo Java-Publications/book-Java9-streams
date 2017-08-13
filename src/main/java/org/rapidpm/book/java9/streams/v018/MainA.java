@@ -1,16 +1,10 @@
 package org.rapidpm.book.java9.streams.v018;
 
-import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.partitioningBy;
 import static org.rapidpm.book.java9.streams.utils.DemoData.nextIntegerStreamWithDuplicates;
 
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-
-import org.rapidpm.book.java9.streams.utils.DemoData;
 
 /**
  *
@@ -27,11 +21,8 @@ public class MainA {
     final Map<Boolean, List<Integer>> resultA_2 = resultA.get(false).stream().collect(partitioningBy(i -> i % 2 == 0));
 
     final Map<Boolean, Map<Boolean, List<Integer>>> resultB = nextIntegerStreamWithDuplicates()
-        .collect(partitioningBy(i -> i < 5 , partitioningBy(i -> i%2 == 0)));
+        .collect(partitioningBy(i -> i < 5 , partitioningBy(i -> i % 2 == 0)));
     System.out.println("resultB = " + resultB);
-
-
-
 
 
   }
