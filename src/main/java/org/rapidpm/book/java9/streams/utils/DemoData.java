@@ -1,5 +1,6 @@
 package org.rapidpm.book.java9.streams.utils;
 
+import java.util.Random;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -31,6 +32,11 @@ public interface DemoData {
 
   static Stream<Integer> nextIntegerStream(){
     return IntStream.range(1,10).boxed();
+  }
+
+  static Stream<Integer> nextIntegerStreamWithDuplicates(){
+    return new Random()
+        .ints(20, 1, 10).boxed();
   }
 
   static Stream<String> nextStringStreamWithDuplicates(){
