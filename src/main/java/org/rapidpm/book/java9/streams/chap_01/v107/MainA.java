@@ -1,10 +1,6 @@
 package org.rapidpm.book.java9.streams.chap_01.v107;
 
-import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 /**
  *
